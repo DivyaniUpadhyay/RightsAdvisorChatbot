@@ -2,8 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("path-to-your-background-image.jpg") no-repeat center center
-    fixed;
+  background: url("path-to-your-background-image.jpg") no-repeat center center fixed;
   background-size: cover;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -31,7 +30,7 @@ body {
   display: flex;
   align-items: center;
   padding: 15px;
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  background: linear-gradient(135deg, #2b6cb0, #3182ce); /* Updated gradient colors */
   color: #ffffff;
 }
 
@@ -103,24 +102,39 @@ body {
 }
 
 #message-input:focus {
-  border: 1px solid #2563eb;
+  border: 1px solid #3182ce;
   background: rgba(255, 255, 255, 0.3);
 }
 
 #send-button {
-  background: #2563eb;
+  background: #3182ce; /* Changed blue color */
   border: none;
   color: #ffffff;
   font-size: 28px; /* Increased font size */
   cursor: pointer;
   border-radius: 50%;
-  padding: 15px; /* Increased padding */
+  padding: 10px; /* Reduced padding */
   margin-left: 15px;
   transition: background 0.3s;
 }
 
 #send-button:hover {
-  background: #1e40af;
+  background: #2b6cb0;
+}
+
+/* Microphone Button Styles */
+#mic-button {
+  background: none;
+  border: none;
+  padding: 0; /* Remove padding */
+  margin: 0 10px; /* Adjust margin as needed */
+  cursor: pointer;
+}
+
+#mic-button img {
+  width: 30px; /* Adjust width as needed */
+  height: 30px; /* Adjust height as needed */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
 }
 
 /* Suggestion Box Styles */
@@ -133,7 +147,7 @@ body {
 }
 
 .suggestion-button {
-  background: #2563eb;
+  background: #3182ce; /* Changed blue color */
   border: none;
   color: #ffffff;
   font-size: 18px; /* Increased font size */
@@ -145,7 +159,7 @@ body {
 }
 
 .suggestion-button:hover {
-  background: #1e40af;
+  background: #2b6cb0;
 }
 
 /* Content Display Styles */
