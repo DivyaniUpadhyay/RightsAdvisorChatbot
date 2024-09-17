@@ -15,7 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "Divisions of the DoJ":
       "The divisions of the Department of Justice include: [List of divisions]",
     "Judges and court vacancies":
-      "Current information on judges and court vacancies: ",
+      "There are several issues related to judicial vacancies in India, including vacancies in the Supreme Court, High Courts, and District Courts:\n\n" +
+      "Supreme Court:\n" +
+      "As of July 5, 2023, the Supreme Court of India had three vacancies out of its sanctioned strength of 34 judges.\n\n" +
+      "High Courts:\n" +
+      "As of April 1, 2024, there were 327 vacancies in High Courts across India, out of a sanctioned strength of 1,114 judges. The Allahabad High Court has the highest number of vacancies at 69, out of a sanctioned strength of 160 seats.\n\n" +
+      "District Courts:\n" +
+      "The Supreme Court directed that the selection process for 15 vacancies in the direct recruitment quota for district judges in Tamil Nadu should be completed by March 31, 2024.\n",
     "Pending cases":
       "Overview of pending cases: [Information about ongoing cases]",
     "Information related to Rape and POCSO Act":
@@ -50,9 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showContent(suggestion) {
     if (suggestionContents[suggestion]) {
+      // Clear previous content to avoid duplication
       contentDisplay.textContent = suggestionContents[suggestion];
       contentDisplay.style.display = "block"; // Show the content display
-      addMessage(suggestionContents[suggestion], "bot");
+      // Add the bot message only if it's not already there
+      const existingMessages = chatMessages.querySelectorAll(".bot-message");
+      const lastMessage = existingMessages[existingMessages.length - 1];
+      if (!lastMessage || lastMessage.textContent !== suggestionContents[suggestion]) {
+        addMessage(suggestionContents[suggestion], "bot");
+      }
     } else {
       contentDisplay.textContent = "No content available.";
       contentDisplay.style.display = "block"; // Ensure it's visible even if no content
