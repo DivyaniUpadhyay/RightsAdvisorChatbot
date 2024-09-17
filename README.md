@@ -1,9 +1,14 @@
 # RightsAdvisorChatbot
-Problem Statement ID – SIH1700  
+Problem Statement ID – SIH1700 
+
 Problem Statement Title- Developing an AI based interactive  chatbot or virtual assistant for the DOJ website
+
 Theme- Smart Automation
+
 PS Category- Software
+
 Team ID- 13120
+
 Team Name – Rights Defenders 
 
 # Description :
